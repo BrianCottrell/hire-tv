@@ -49,18 +49,21 @@ public final class MovieList {
                 "LinkedIn"
         };
 
-        String description = "Fusce id nisi turpis. Praesent viverra bibendum semper. "
-                + "Donec tristique, orci sed semper lacinia, quam erat rhoncus massa, non congue tellus est "
-                + "quis tellus. Sed mollis orci venenatis quam scelerisque accumsan. Curabitur a massa sit "
-                + "amet mi accumsan mollis sed et magna. Vivamus sed aliquam risus. Nulla eget dolor in elit "
-                + "facilisis mattis. Ut aliquet luctus lacus. Phasellus nec commodo erat. Praesent tempus id "
-                + "lectus ac scelerisque. Maecenas pretium cursus lectus id volutpat.";
+        String description[] = {
+                "Making Work Transparent & Rewarding.",
+                "Facebook's mission is to give people the power to share and make the world more open and connected. People use Facebook to stay connected with friends and family, to discover what's going on in the world, and to share and express what matters to them",
+                "Making Work Transparent & Rewarding.",
+                "Making Work Transparent & Rewarding.",
+                "Making Work Transparent & Rewarding.",
+                "Making Work Transparent & Rewarding.",
+
+        };
         String studio[] = {
-                "A", "Studio One", "B+ (71/100)", "B+ (71/100)", "Studio Four", "B+ (71/100)"
+                "B- (75/100)", "A+ (79/100)", "B+ (71/100)", "B+ (71/100)", "Studio Four", "B+ (71/100)"
         };
         String videoUrl[] = {
                 "https://youtu.be/fUUM4lKHmlA",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search.mp4",
+                "https://www.youtube.com/watch?v=59Eeo4-7m30",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue.mp4",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole.mp4",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4",
@@ -75,7 +78,7 @@ public final class MovieList {
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/bg.jpg",
         };
         String cardImageUrl[] = {
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/card.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_logo_comparably.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/facebook-logo.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/google-logo.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25042/25042_logo_microsoft.png",
@@ -94,7 +97,7 @@ public final class MovieList {
                     buildMovieInfo(
                             "category",
                             title[index],
-                            description,
+                            description[index],
                             studio[index],
                             videoUrl[index],
                             cardImageUrl[index],
