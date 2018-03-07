@@ -19,12 +19,13 @@ import java.util.List;
 
 public final class MovieList {
     public static final String MOVIE_CATEGORY[] = {
-            "Category Zero",
-            "Category One",
-            "Category Two",
-            "Category Three",
-            "Category Four",
-            "Category Five",
+            "Featured Companies",
+            "Peronalized",
+            "All Companies",
+            "Top Rated Companies by Metro",
+            "Top Rated for Women",
+            "Top Rated for Diverse Employees",
+            "Recently Answered Q&A"
     };
 
     private static List<Movie> list;
@@ -41,10 +42,11 @@ public final class MovieList {
         list = new ArrayList<>();
         String title[] = {
                 "Comparably",
-                "Google Demo Slam_ 20ft Search",
-                "Introducing Gmail Blue",
-                "Introducing Google Fiber to the Pole",
-                "Introducing Google Nose"
+                "Facebook",
+                "Google",
+                "Microsoft",
+                "Amazon",
+                "LinkedIn"
         };
 
         String description = "Fusce id nisi turpis. Praesent viverra bibendum semper. "
@@ -54,29 +56,38 @@ public final class MovieList {
                 + "facilisis mattis. Ut aliquet luctus lacus. Phasellus nec commodo erat. Praesent tempus id "
                 + "lectus ac scelerisque. Maecenas pretium cursus lectus id volutpat.";
         String studio[] = {
-                "Studio Zero", "Studio One", "Studio Two", "Studio Three", "Studio Four"
+                "A", "Studio One", "B+ (71/100)", "B+ (71/100)", "Studio Four", "B+ (71/100)"
         };
         String videoUrl[] = {
                 "https://youtu.be/fUUM4lKHmlA",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search.mp4",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue.mp4",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole.mp4",
+                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4"
         };
         String bgImageUrl[] = {
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/bg.jpg",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search/bg.jpg",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue/bg.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25042/25042_profile_microsoft.png",
+                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/bg.jpg",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/bg.jpg",
         };
         String cardImageUrl[] = {
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/card.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search/card.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue/card.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole/card.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/card.jpg"
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/facebook-logo.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/google-logo.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25042/25042_logo_microsoft.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/amazon-logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/linkedin-logo.png"
         };
+
+        String companyUrl[] = {
+                "https://www.comparably.com",
+                "https://www.comparably.com/companies/facebook",
+        };
+
 
         for (int index = 0; index < title.length; ++index) {
             list.add(
