@@ -63,8 +63,8 @@ public final class MovieList {
         };
         String videoUrl[] = {
                 "https://www.youtube.com/embed/fUUM4lKHmlA",
-                "https://www.youtube.com/embed/ARA0AxrnHdM",
                 "https://www.youtube.com/embed/4mmuIHiwupk",
+                "https://www.youtube.com/embed/ARA0AxrnHdM",
                 "https://www.youtube.com/embed/oZ6URVPefKQ",
                 "https://www.youtube.com/embed/6xGLQ_NY0QE",
                 "https://www.youtube.com/embed/ZVlUwwgOfKw"
@@ -97,7 +97,7 @@ public final class MovieList {
 
 
         String comparably[] = {
-                "https://www.youtube.com/embed/fUUM4lKHmlA",
+                "https://www.youtube.com/embed/ZR9Wg-KWJ8k",
                 "https://www.youtube.com/embed/59Eeo4-7m30",
                 "https://www.youtube.com/embed/hLd32Fb2uy8",
                 "https://www.youtube.com/embed/VQ2sFiBFnxw",
