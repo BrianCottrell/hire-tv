@@ -62,12 +62,12 @@ public final class MovieList {
                 "B- (75/100)", "A+ (79/100)", "A+ (78/100)", "B+ (71/100)", "B+ (71/100)", "A (77/100)"
         };
         String videoUrl[] = {
-                "https://www.youtube.com/watch?v=15XDna94DF8",
-                "https://www.youtube.com/watch?v=59Eeo4-7m30",
-                "https://www.youtube.com/watch?v=hLd32Fb2uy8",
-                "https://www.youtube.com/watch?v=VQ2sFiBFnxw",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4",
-                "https://www.youtube.com/watch?v=tXyT94Yw_Qs"
+                "15XDna94DF8",
+                "59Eeo4-7m30",
+                "hLd32Fb2uy8",
+                "VQ2sFiBFnxw",
+                "tXyT94Yw_Qs",
+                "tXyT94Yw_Qs"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
@@ -130,6 +130,86 @@ public final class MovieList {
                     ));
         }
 
+        return list;
+    }
+
+    public static List<Movie> setupMovies2() {
+        list = new ArrayList<>();
+        String title[] = {
+                "Comparably",
+                "PepsiCo",
+                "Asana",
+                "Salesforce",
+                "Striim",
+                "The Trade Desk, Inc."
+        };
+        String description[] = {
+                "Making Work Transparent & Rewarding.",
+                "At PepsiCo we believe that business and society can thrive together. ",
+                "Help humanity thrive by enabling all teams to work together effortlessly.",
+                "Salesforce, the Customer Success Platform, and world's #1 CRM empowers companies to connect with their customers in a whole new way.",
+                "Striim is pronounced stream, with two i's for integration and intelligence. The company was founded in 2012 as WebAction, with a mission to help companies make data useful the instant it's born.",
+                "The Trade Desk is the fastest-growing adtech platform for a reason – our people. We’re here because we believe we're building something special, and we're looking for good people to pitch in.",
+        };
+        String studio[] = {
+                "B- (75/100)", "B+ (71/100)", "A+ (87/100)", "A+ (80/100)", "A+ (93/100)", "A- (80/100)"
+        };
+        String videoUrl[] = {
+                "https://www.youtube.com/watch?v=15XDna94DF8",
+                "https://www.youtube.com/watch?v=kTym1zuGTAQ",
+                "https://www.youtube.com/watch?v=zIhCwTtgQik",
+                "https://www.youtube.com/watch?v=cWEx8nqYEtE",
+                "https://www.youtube.com/watch?v=UAB9wyKZGf8",
+                "https://www.youtube.com/watch?v=R-ArBqE_4CE"
+        };
+        String bgImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/33002/33002_profile_pepsico.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/61336/61336_profile_asana.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/16050/16050_profile_salesforce.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/48446/48446_profile_striim.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_profile_the-trade-desk--inc-.png"
+        };
+        String cardImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_logo_comparably.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/33002/33002_logo_pepsico.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/61336/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/salesforce-logo.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/48446/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_logo_the-trade-desk--inc-.png"
+        };
+        String match[] = {
+                "98%",
+                "85%",
+                "74%",
+                "85%",
+                "78%",
+                "81%"
+        };
+
+        int chart[] = {
+                R.mipmap.r1c1,
+                R.mipmap.r1c2,
+                R.mipmap.r1c3,
+                R.mipmap.r1c4,
+                R.mipmap.r1c5,
+                R.mipmap.r1c6,
+        };
+
+        for (int index = 0; index < title.length; ++index) {
+            list.add(
+                    buildMovieInfo(
+                            "category",
+                            title[index],
+                            description[index],
+                            studio[index],
+                            videoUrl[index],
+                            cardImageUrl[index],
+                            bgImageUrl[index],
+                            match[index],
+                            chart[index]
+                    ));
+        }
         return list;
     }
 

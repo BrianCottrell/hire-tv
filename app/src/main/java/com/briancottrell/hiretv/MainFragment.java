@@ -77,6 +77,9 @@ public class MainFragment extends BrowseFragment {
     private String mBackgroundUri;
     private BackgroundManager mBackgroundManager;
 
+    List<Movie> list1;
+
+    Movie defaultmovie;
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         Log.i(TAG, "onCreate");
@@ -132,7 +135,7 @@ public class MainFragment extends BrowseFragment {
                 if (message.getChannel() != null) {
                     // Message has been received on channel group stored in
                     // message.getChannel()
-                    Movie movie = MovieList.getList().get(0);
+                    Movie movie = defaultmovie;
                     Intent intent = new Intent(getActivity(), DetailsActivity.class);
                     intent.putExtra(DetailsActivity.MOVIE, movie);
 
@@ -161,23 +164,6 @@ public class MainFragment extends BrowseFragment {
 
     }
 
-    private static Movie buildMovieInfo(String category, String title,
-                                        String description, String studio, String videoUrl, String cardImageUrl,
-                                        String backgroundImageUrl, String match, int chart) {
-        Movie movie = new Movie();
-        movie.setId(0);
-        movie.setTitle(title);
-        movie.setDescription(description);
-        movie.setStudio(studio);
-        movie.setCategory(category);
-        movie.setCardImageUrl(cardImageUrl);
-        movie.setBackgroundImageUrl(backgroundImageUrl);
-        movie.setVideoUrl(videoUrl);
-        movie.setMatch(match);
-        movie.setChart(chart);
-        return movie;
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -188,7 +174,8 @@ public class MainFragment extends BrowseFragment {
     }
 
     private void loadRows() {
-        List<Movie> list = MovieList.setupMovies();
+        list1 = MovieList.setupMovies();
+        defaultmovie = list1.get(0);
 
         mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
         CardPresenter cardPresenter = new CardPresenter();
@@ -199,10 +186,13 @@ public class MainFragment extends BrowseFragment {
             if (i != 0) {
                 Collections.shuffle(list);
             }*/
+
             ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(cardPresenter);
+
             for (int j = 0; j < NUM_COLS; j++) {
-                listRowAdapter.add(list.get(j % 5));
+                listRowAdapter.add(list1.get(j % 5));
             }
+
             HeaderItem header = new HeaderItem(i, MovieList.MOVIE_CATEGORY[i]);
             mRowsAdapter.add(new ListRow(header, listRowAdapter));
         }
