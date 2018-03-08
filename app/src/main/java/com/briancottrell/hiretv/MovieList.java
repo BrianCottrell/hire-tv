@@ -63,11 +63,11 @@ public final class MovieList {
         };
         String videoUrl[] = {
                 "https://www.youtube.com/embed/fUUM4lKHmlA",
-                "https://www.youtube.com/embed/59Eeo4-7m30",
-                "https://www.youtube.com/embed/hLd32Fb2uy8",
-                "https://www.youtube.com/embed/VQ2sFiBFnxw",
-                "https://www.youtube.com/embed/tXyT94Yw_Qs",
-                "https://www.youtube.com/embed/tXyT94Yw_Qs"
+                "https://www.youtube.com/embed/ARA0AxrnHdM",
+                "https://www.youtube.com/embed/4mmuIHiwupk",
+                "https://www.youtube.com/embed/oZ6URVPefKQ",
+                "https://www.youtube.com/embed/6xGLQ_NY0QE",
+                "https://www.youtube.com/embed/ZVlUwwgOfKw"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
@@ -157,11 +157,11 @@ public final class MovieList {
         };
         String videoUrl[] = {
                 "https://www.youtube.com/watch?v=15XDna94DF8",
-                "https://www.youtube.com/watch?v=kTym1zuGTAQ",
-                "https://www.youtube.com/watch?v=zIhCwTtgQik",
-                "https://www.youtube.com/watch?v=cWEx8nqYEtE",
+                "https://www.youtube.com/watch?v=nXjU9UEwV9w",
+                "https://www.youtube.com/watch?v=rk8nPWmXsRo",
+                "https://www.youtube.com/watch?v=32C2cTkwGuM",
                 "https://www.youtube.com/watch?v=UAB9wyKZGf8",
-                "https://www.youtube.com/watch?v=R-ArBqE_4CE"
+                "https://www.youtube.com/watch?v=gqNIIJfZA3E"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
