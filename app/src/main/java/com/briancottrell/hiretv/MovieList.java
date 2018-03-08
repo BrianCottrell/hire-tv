@@ -20,7 +20,7 @@ import java.util.List;
 public final class MovieList {
     public static final String MOVIE_CATEGORY[] = {
             "Featured Companies",
-            "Peronalized",
+            "Peronalizeda",
             "All Companies",
             "Top Rated Companies by Metro",
             "Top Rated for Women",
@@ -52,30 +52,30 @@ public final class MovieList {
         String description[] = {
                 "Making Work Transparent & Rewarding.",
                 "Facebook's mission is to give people the power to share and make the world more open and connected. People use Facebook to stay connected with friends and family, to discover what's going on in the world, and to share and express what matters to them",
-                "Making Work Transparent & Rewarding.",
-                "Making Work Transparent & Rewarding.",
-                "Making Work Transparent & Rewarding.",
-                "Making Work Transparent & Rewarding.",
+                "Organize the world's information and make it universally accessible and useful",
+                "Microsoft, a software corporation that develops, manufactures, licenses, supports, and sells a range of software products and services.",
+                "Amazon is guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking. Customer reviews, 1-Click shopping, personalized recommendations, Prime, Fulfillment by Amazon, AWS, Kindle Direct Publishing, Kindle, Fire tablets, Fire TV, Amazon Echo, and Alexa are some of the products and services pioneered by Amazon.",
+                "To connect the world's professionals to make them more productive and successful. When you join LinkedIn, you get access to people, jobs, news, updates, and insights that help you be great at what you do.",
 
         };
         String studio[] = {
-                "B- (75/100)", "A+ (79/100)", "B+ (71/100)", "B+ (71/100)", "Studio Four", "B+ (71/100)"
+                "B- (75/100)", "A+ (79/100)", "A+ (78/100)", "B+ (71/100)", "B+ (71/100)", "A (77/100)"
         };
         String videoUrl[] = {
-                "https://youtu.be/fUUM4lKHmlA",
+                "https://www.youtube.com/watch?v=15XDna94DF8",
                 "https://www.youtube.com/watch?v=59Eeo4-7m30",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue.mp4",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole.mp4",
+                "https://www.youtube.com/watch?v=hLd32Fb2uy8",
+                "https://www.youtube.com/watch?v=VQ2sFiBFnxw",
                 "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4"
+                "https://www.youtube.com/watch?v=tXyT94Yw_Qs"
         };
         String bgImageUrl[] = {
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review/bg.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search/bg.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/7642/7642_profile_facebook.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/23906/23906_profile_google.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25042/25042_profile_microsoft.png",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/bg.jpg",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25287/25287_profile_amazon.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25914/25914_profile_linkedin.png",
         };
         String cardImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_logo_comparably.png",
@@ -86,9 +86,32 @@ public final class MovieList {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/linkedin-logo.png"
         };
 
-        String companyUrl[] = {
-                "https://www.comparably.com",
-                "https://www.comparably.com/companies/facebook",
+        String match[] = {
+                "98%",
+                "55%",
+                "89%",
+                "74%",
+                "82%",
+                "52%"
+        };
+
+
+        String percentage[] = {
+                "CEORating A\nExecutiveTeam A-\nProfessionalDevelopment B+",
+                "55%",
+                "89%",
+                "74%",
+                "82%",
+                "52%"
+        };
+
+        int chart[] = {
+                R.mipmap.r1c1,
+                R.mipmap.r1c2,
+                R.mipmap.r1c3,
+                R.mipmap.r1c4,
+                R.mipmap.r1c5,
+                R.mipmap.r1c6,
         };
 
 
@@ -101,7 +124,10 @@ public final class MovieList {
                             studio[index],
                             videoUrl[index],
                             cardImageUrl[index],
-                            bgImageUrl[index]));
+                            bgImageUrl[index],
+                            match[index],
+                            chart[index]
+                    ));
         }
 
         return list;
@@ -109,7 +135,7 @@ public final class MovieList {
 
     private static Movie buildMovieInfo(String category, String title,
                                         String description, String studio, String videoUrl, String cardImageUrl,
-                                        String backgroundImageUrl) {
+                                        String backgroundImageUrl, String match, int chart) {
         Movie movie = new Movie();
         movie.setId(count++);
         movie.setTitle(title);
@@ -119,6 +145,8 @@ public final class MovieList {
         movie.setCardImageUrl(cardImageUrl);
         movie.setBackgroundImageUrl(backgroundImageUrl);
         movie.setVideoUrl(videoUrl);
+        movie.setMatch(match);
+        movie.setChart(chart);
         return movie;
     }
 }

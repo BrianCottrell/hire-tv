@@ -33,6 +33,8 @@ public class Movie implements Serializable {
     private String videoUrl;
     private String studio;
     private String category;
+    private String match;
+    private int chart;
 
     public Movie() {
     }
@@ -101,6 +103,21 @@ public class Movie implements Serializable {
         this.category = category;
     }
 
+    public void setMatch(String match) {
+        this.match = match;
+    }
+
+    public String getMatch() {
+        return match;
+    }
+
+    public void setChart(int chart) {
+        this.chart = chart;
+    }
+
+    public int getChart() {
+        return chart;
+    }
 
     @Override
     public String toString() {

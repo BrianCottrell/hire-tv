@@ -14,6 +14,7 @@
 
 package com.briancottrell.hiretv;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Timer;
@@ -49,6 +50,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.pubnub.api.PNConfiguration;
+import com.pubnub.api.PubNub;
+import com.pubnub.api.callbacks.PNCallback;
+import com.pubnub.api.callbacks.SubscribeCallback;
+import com.pubnub.api.enums.PNStatusCategory;
+import com.pubnub.api.models.consumer.PNPublishResult;
+import com.pubnub.api.models.consumer.PNStatus;
+import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
+import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
 
 public class MainFragment extends BrowseFragment {
     private static final String TAG = "MainFragment";
@@ -79,6 +89,93 @@ public class MainFragment extends BrowseFragment {
         loadRows();
 
         setupEventListeners();
+
+
+
+        PNConfiguration pnConfiguration = new PNConfiguration();
+        pnConfiguration.setSubscribeKey("sub-c-4569d732-5174-11e4-a2b1-02ee2ddab7fe");
+        pnConfiguration.setPublishKey("pub-c-f3a1b648-29d4-4817-b9e3-e44b2de6ec18");
+
+        PubNub pubnub = new PubNub(pnConfiguration);
+
+        pubnub.addListener(new SubscribeCallback() {
+            @Override
+            public void status(PubNub pubnub, PNStatus status) {
+
+
+                if (status.getCategory() == PNStatusCategory.PNUnexpectedDisconnectCategory) {
+                    // This event happens when radio / connectivity is lost
+                }
+
+                else if (status.getCategory() == PNStatusCategory.PNConnectedCategory) {
+
+                    // Connect event. You can do stuff like publish, and know you'll get it.
+                    // Or just use the connected event to confirm you are subscribed for
+                    // UI / internal notifications, etc
+
+                }
+                else if (status.getCategory() == PNStatusCategory.PNReconnectedCategory) {
+
+                    // Happens as part of our regular operation. This event happens when
+                    // radio / connectivity is lost, then regained.
+                }
+                else if (status.getCategory() == PNStatusCategory.PNDecryptionErrorCategory) {
+
+                    // Handle messsage decryption error. Probably client configured to
+                    // encrypt messages and on live data feed it received plain text.
+                }
+            }
+
+            @Override
+            public void message(PubNub pubnub, PNMessageResult message) {
+                // Handle new message stored in message.message
+                if (message.getChannel() != null) {
+                    // Message has been received on channel group stored in
+                    // message.getChannel()
+                    Movie movie = MovieList.getList().get(0);
+                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                    intent.putExtra(DetailsActivity.MOVIE, movie);
+
+                    getActivity().startActivity(intent);
+                }
+                else {
+                    // Message has been received on channel stored in
+                    // message.getSubscription()
+                }
+
+            /*
+                log the following items with your favorite logger
+                    - message.getMessage()
+                    - message.getSubscription()
+                    - message.getTimetoken()
+            */
+            }
+
+            @Override
+            public void presence(PubNub pubnub, PNPresenceEventResult presence) {
+
+            }
+        });
+
+        pubnub.subscribe().channels(Arrays.asList("awesomeChannel")).execute();
+
+    }
+
+    private static Movie buildMovieInfo(String category, String title,
+                                        String description, String studio, String videoUrl, String cardImageUrl,
+                                        String backgroundImageUrl, String match, int chart) {
+        Movie movie = new Movie();
+        movie.setId(0);
+        movie.setTitle(title);
+        movie.setDescription(description);
+        movie.setStudio(studio);
+        movie.setCategory(category);
+        movie.setCardImageUrl(cardImageUrl);
+        movie.setBackgroundImageUrl(backgroundImageUrl);
+        movie.setVideoUrl(videoUrl);
+        movie.setMatch(match);
+        movie.setChart(chart);
+        return movie;
     }
 
     @Override
@@ -98,9 +195,10 @@ public class MainFragment extends BrowseFragment {
 
         int i;
         for (i = 0; i < NUM_ROWS; i++) {
+            /*
             if (i != 0) {
                 Collections.shuffle(list);
-            }
+            }*/
             ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(cardPresenter);
             for (int j = 0; j < NUM_COLS; j++) {
                 listRowAdapter.add(list.get(j % 5));

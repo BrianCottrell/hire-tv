@@ -24,8 +24,10 @@ public class DetailsDescriptionPresenter extends AbstractDetailsDescriptionPrese
 
         if (movie != null) {
             viewHolder.getTitle().setText(movie.getTitle());
-            viewHolder.getSubtitle().setText(movie.getStudio());
-            viewHolder.getBody().setText(movie.getDescription());
+            viewHolder.getSubtitle().setText(movie.getStudio() + "   " + movie.getMatch() + " match");
+            viewHolder.getBody().setText(movie.getDescription() + "\n\n");
+
+            viewHolder.getBody().setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, null, viewHolder.getBody().getContext().getResources().getDrawable(movie.getChart()));
         }
     }
 }
