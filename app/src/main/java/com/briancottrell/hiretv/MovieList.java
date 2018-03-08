@@ -245,10 +245,10 @@ public final class MovieList {
         };
         String videoUrl[] = {
                 "https://www.youtube.com/embed/6N1IfOhwvus",
-                "https://www.youtube.com/embed/MMfF2wUtSDU",
-                "https://www.youtube.com/embed/NxRrfgdW0FA",
+                "https://www.youtube.com/embed/q3SkMWaeKjQ",
+                "https://www.youtube.com/embed/f_PwPK_zKKU",
                 "https://www.youtube.com/embed/LfufsQSEVyg",
-                "https://www.youtube.com/embed/xO0_Mavr-kU",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
                 "https://www.youtube.com/embed/Znv1Gpa5Zms"
         };
         String bgImageUrl[] = {
