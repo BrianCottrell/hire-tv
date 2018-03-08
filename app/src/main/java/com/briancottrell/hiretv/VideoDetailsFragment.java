@@ -17,6 +17,7 @@ package com.briancottrell.hiretv;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v17.leanback.app.DetailsFragment;
@@ -180,7 +181,12 @@ public class VideoDetailsFragment extends DetailsFragment {
                     YouTubeIntents youTubeIntents;
 //                    Intent intent = new Intent(getActivity(), PlaybackActivity.class);
 //                    intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
-                    Intent intent = YouTubeIntents.createPlayVideoIntentWithOptions(getActivity(), mSelectedMovie.getVideoUrl(), true, true);
+
+//                    Intent intent = YouTubeIntents.createPlayVideoIntentWithOptions(getActivity(), mSelectedMovie.getVideoUrl(), true, true);
+
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(mSelectedMovie.getVideoUrl()));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), action.toString(), Toast.LENGTH_SHORT).show();

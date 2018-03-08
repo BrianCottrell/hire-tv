@@ -20,9 +20,9 @@ import java.util.List;
 public final class MovieList {
     public static final String MOVIE_CATEGORY[] = {
             "Featured Companies",
-            "Peronalizeda",
-            "All Companies",
-            "Top Rated Companies by Metro",
+            "Just For You",
+            "Recently Updated",
+            "Top Rated Companies in Los Angeles",
             "Top Rated for Women",
             "Top Rated for Diverse Employees",
             "Recently Answered Q&A"
@@ -62,12 +62,12 @@ public final class MovieList {
                 "B- (75/100)", "A+ (79/100)", "A+ (78/100)", "B+ (71/100)", "B+ (71/100)", "A (77/100)"
         };
         String videoUrl[] = {
-                "15XDna94DF8",
-                "59Eeo4-7m30",
-                "hLd32Fb2uy8",
-                "VQ2sFiBFnxw",
-                "tXyT94Yw_Qs",
-                "tXyT94Yw_Qs"
+                "https://www.youtube.com/embed/fUUM4lKHmlA",
+                "https://www.youtube.com/embed/59Eeo4-7m30",
+                "https://www.youtube.com/embed/hLd32Fb2uy8",
+                "https://www.youtube.com/embed/VQ2sFiBFnxw",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
