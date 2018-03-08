@@ -174,6 +174,7 @@ public class MainFragment extends BrowseFragment {
     private void loadRows() {
         List<Movie> list1 = MovieList.setupMovies();
         List<Movie> list2 = MovieList.setupMovies2();
+        List<Movie> list3 = MovieList.setupMovies2();
 
         defaultmovie = list1.get(0);
 
@@ -195,10 +196,16 @@ public class MainFragment extends BrowseFragment {
                     listRowAdapter.add(list1.get(j % 5));
                 }
             }
-            else
+            else if(i == 1)
             {
                 for (int j = 0; j < NUM_COLS; j++) {
                     listRowAdapter.add(list2.get(j % 5));
+                }
+            }
+            else
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list3.get(j % 5));
                 }
             }
 
