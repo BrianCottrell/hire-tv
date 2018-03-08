@@ -397,6 +397,84 @@ public final class MovieList {
         }
         return list;
     }
+    public static List<Movie> setupMovies5() {
+        list = new ArrayList<>();
+        String title[] = {
+                "Wells Fargo",
+                "Walmart",
+                "Yoi Corp",
+                "MedSpark",
+                "Luminat",
+                "AT&T"
+        };
+        // add more here
+        String description[] = {
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+        };
+        String studio[] = {
+                "A+ (90/100)", "B+ (75/100)", "A (91/100)", "A (90/100)", "A (87/100)", "A+ (91/100)"
+        };
+        String videoUrl[] = {
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " "
+        };
+        String bgImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25681/25681_profile_wells-fargo.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/37198/37198_profile_walmart.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/528435/528435_profile_yoi-corp.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/87244/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/87244/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/29093/29093_profile_at-t.png"
+        };
+        String cardImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/25681/25681_logo_wells-fargo.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/37198/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/528435/528435_logo_yoi-corp.png",
+                "https://logo.clearbit.com/medspark.my",
+                "https://www.comparably.com//static/skins/comparably_light/global/img/logo-company.svg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/29093/29093_logo_at-t.png"
+        };
+        String match[] = {
+                "87%",
+                "96%",
+                "72%",
+                "63%",
+                "91%",
+                "82%"
+        };
+        int chart[] = {
+                R.mipmap.r2c1,
+                R.mipmap.r2c2,
+                R.mipmap.r2c3,
+                R.mipmap.r2c4,
+                R.mipmap.r2c5,
+                R.mipmap.r2c6,
+        };
+        for (int index = 0; index < title.length; ++index) {
+            list.add(
+                    buildMovieInfo(
+                            "category",
+                            title[index],
+                            description[index],
+                            studio[index],
+                            videoUrl[index],
+                            cardImageUrl[index],
+                            bgImageUrl[index],
+                            match[index],
+                            chart[index]
+                    ));
+        }
+        return list;
+    }
 
     public static List<Movie> setupMovies6() {
         list = new ArrayList<>();
