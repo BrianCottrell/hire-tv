@@ -363,13 +363,21 @@ public final class MovieList {
                 "68%",
                 "73%"
         };
+        String comparably[] = {
+                "https://www.youtube.com/embed/6N1IfOhwvus",
+                "https://www.youtube.com/embed/MMfF2wUtSDU",
+                "https://www.youtube.com/embed/NxRrfgdW0FA",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
+                "https://www.youtube.com/embed/xO0_Mavr-kU",
+                "https://www.youtube.com/embed/Znv1Gpa5Zms"
+        };
         int chart[] = {
-                R.mipmap.r4c1,
-                R.mipmap.r4c2,
-                R.mipmap.r4c3,
-                R.mipmap.r4c4,
-                R.mipmap.r4c5,
-                R.mipmap.r4c6,
+                R.mipmap.r3c1,
+                R.mipmap.r3c2,
+                R.mipmap.r3c3,
+                R.mipmap.r3c4,
+                R.mipmap.r3c5,
+                R.mipmap.r3c6,
         };
         for (int index = 0; index < title.length; ++index) {
             list.add(
@@ -382,6 +390,7 @@ public final class MovieList {
                             cardImageUrl[index],
                             bgImageUrl[index],
                             match[index],
+                            comparably[index],
                             chart[index]
                     ));
         }
