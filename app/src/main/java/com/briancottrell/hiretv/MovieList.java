@@ -21,11 +21,11 @@ public final class MovieList {
     public static final String MOVIE_CATEGORY[] = {
             "Featured Companies",
             "Just For You",
-            "Recently Updated",
             "Top Rated Companies in Los Angeles",
             "Top Rated for Women",
+            "Recently Updated",
             "Top Rated for Diverse Employees",
-            "Recently Answered Q&A"
+            "Companies with the Least Candidates"
     };
 
     private static List<Movie> list;
@@ -64,8 +64,8 @@ public final class MovieList {
         String videoUrl[] = {
                 "https://www.youtube.com/embed/fUUM4lKHmlA",
                 "https://www.youtube.com/embed/4mmuIHiwupk",
-                "https://www.youtube.com/embed/ARA0AxrnHdM",
                 "https://www.youtube.com/embed/oZ6URVPefKQ",
+                "https://www.youtube.com/embed/ARA0AxrnHdM",
                 "https://www.youtube.com/embed/6xGLQ_NY0QE",
                 "https://www.youtube.com/embed/ZVlUwwgOfKw"
         };
@@ -303,6 +303,85 @@ public final class MovieList {
                             bgImageUrl[index],
                             match[index],
                             comparably[index],
+                            chart[index]
+                    ));
+        }
+        return list;
+    }
+
+    public static List<Movie> setupMovies4() {
+        list = new ArrayList<>();
+        String title[] = {
+                "DuMont Project",
+                "Parsons Corporation",
+                "Penske Media Corporation",
+                "Ytel",
+                "PeerStreet",
+                "HyreCar"
+        };
+        // add more here
+        String description[] = {
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+        };
+        String studio[] = {
+                "A (85/100)", "A+ (97/100)", "B (68/100)", "A+ (92/100)", "B+ (73/100)", "A (86/100)"
+        };
+        String videoUrl[] = {
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " "
+        };
+        String bgImageUrl[] = {
+                "https://www.comparably.com/static/skins/comparably_light/mixins/companies/profile/header/img/bg.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/158175/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/159091/bg.jpg",
+                "https://www.comparably.com/static/skins/comparably_light/mixins/companies/profile/header/img/bg.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/74142/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/130759/bg.jpg"
+        };
+        String cardImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/421655/421655_logo_the-dumont-project.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/158175/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/159091/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/323913/323913_logo_ytel.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/74142/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/130759/logo.jpg"
+        };
+        String match[] = {
+                "73%",
+                "91%",
+                "78%",
+                "94%",
+                "68%",
+                "73%"
+        };
+        int chart[] = {
+                R.mipmap.r4c1,
+                R.mipmap.r4c2,
+                R.mipmap.r4c3,
+                R.mipmap.r4c4,
+                R.mipmap.r4c5,
+                R.mipmap.r4c6,
+        };
+        for (int index = 0; index < title.length; ++index) {
+            list.add(
+                    buildMovieInfo(
+                            "category",
+                            title[index],
+                            description[index],
+                            studio[index],
+                            videoUrl[index],
+                            cardImageUrl[index],
+                            bgImageUrl[index],
+                            match[index],
                             chart[index]
                     ));
         }
