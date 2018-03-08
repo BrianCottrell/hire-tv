@@ -221,6 +221,7 @@ public final class MovieList {
         }
         return list;
     }
+
     public static List<Movie> setupMovies3() {
         list = new ArrayList<>();
         String title[] = {
