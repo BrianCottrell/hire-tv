@@ -77,8 +77,6 @@ public class MainFragment extends BrowseFragment {
     private String mBackgroundUri;
     private BackgroundManager mBackgroundManager;
 
-    List<Movie> list1;
-
     Movie defaultmovie;
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -174,7 +172,9 @@ public class MainFragment extends BrowseFragment {
     }
 
     private void loadRows() {
-        list1 = MovieList.setupMovies();
+        List<Movie> list1 = MovieList.setupMovies();
+        List<Movie> list2 = MovieList.setupMovies2();
+
         defaultmovie = list1.get(0);
 
         mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
@@ -189,8 +189,17 @@ public class MainFragment extends BrowseFragment {
 
             ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(cardPresenter);
 
-            for (int j = 0; j < NUM_COLS; j++) {
-                listRowAdapter.add(list1.get(j % 5));
+            if(i == 0)
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list1.get(j % 5));
+                }
+            }
+            else
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list2.get(j % 5));
+                }
             }
 
             HeaderItem header = new HeaderItem(i, MovieList.MOVIE_CATEGORY[i]);

@@ -189,11 +189,11 @@ public final class MovieList {
 
         int chart[] = {
                 R.mipmap.r1c1,
-                R.mipmap.r1c2,
-                R.mipmap.r1c3,
-                R.mipmap.r1c4,
-                R.mipmap.r1c5,
-                R.mipmap.r1c6,
+                R.mipmap.r2c2,
+                R.mipmap.r2c3,
+                R.mipmap.r2c4,
+                R.mipmap.r2c5,
+                R.mipmap.r2c6,
         };
 
         for (int index = 0; index < title.length; ++index) {
