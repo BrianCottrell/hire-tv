@@ -452,7 +452,7 @@ public final class MovieList {
                 "82%"
         };
         int chart[] = {
-                R.mipmap.r2c1,
+                R.mipmap.r1c1,
                 R.mipmap.r2c2,
                 R.mipmap.r2c3,
                 R.mipmap.r2c4,
@@ -470,6 +470,7 @@ public final class MovieList {
                             cardImageUrl[index],
                             bgImageUrl[index],
                             match[index],
+                            cardImageUrl[index],
                             chart[index]
                     ));
         }
