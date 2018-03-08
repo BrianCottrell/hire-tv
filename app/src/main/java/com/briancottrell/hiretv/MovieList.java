@@ -156,12 +156,12 @@ public final class MovieList {
                 "B- (75/100)", "B+ (71/100)", "A+ (87/100)", "A+ (80/100)", "A+ (93/100)", "A- (80/100)"
         };
         String videoUrl[] = {
-                "https://www.youtube.com/watch?v=15XDna94DF8",
-                "https://www.youtube.com/watch?v=nXjU9UEwV9w",
-                "https://www.youtube.com/watch?v=rk8nPWmXsRo",
-                "https://www.youtube.com/watch?v=32C2cTkwGuM",
-                "https://www.youtube.com/watch?v=UAB9wyKZGf8",
-                "https://www.youtube.com/watch?v=gqNIIJfZA3E"
+                "https://www.youtube.com/embed/15XDna94DF8",
+                "https://www.youtube.com/embed/nXjU9UEwV9w",
+                "https://www.youtube.com/embed/rk8nPWmXsRo",
+                "https://www.youtube.com/embed/32C2cTkwGuM",
+                "https://www.youtube.com/embed/UAB9wyKZGf8",
+                "https://www.youtube.com/embed/gqNIIJfZA3E"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
