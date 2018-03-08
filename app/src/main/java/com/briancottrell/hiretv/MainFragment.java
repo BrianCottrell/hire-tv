@@ -174,7 +174,7 @@ public class MainFragment extends BrowseFragment {
     private void loadRows() {
         List<Movie> list1 = MovieList.setupMovies();
         List<Movie> list2 = MovieList.setupMovies2();
-        List<Movie> list3 = MovieList.setupMovies();
+        List<Movie> list3 = MovieList.setupMovies3();
 
         defaultmovie = list1.get(0);
 
