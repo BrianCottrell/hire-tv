@@ -137,67 +137,67 @@ public final class MovieList {
     public static List<Movie> setupMovies2() {
         list = new ArrayList<>();
         String title[] = {
-                "Comparably",
                 "PepsiCo",
+                "Comparably",
                 "Asana",
                 "Salesforce",
                 "Striim",
                 "The Trade Desk, Inc."
         };
         String description[] = {
-                "Making Work Transparent & Rewarding.",
                 "At PepsiCo we believe that business and society can thrive together. ",
+                "Making Work Transparent & Rewarding.",
                 "Help humanity thrive by enabling all teams to work together effortlessly.",
                 "Salesforce, the Customer Success Platform, and world's #1 CRM empowers companies to connect with their customers in a whole new way.",
                 "Striim is pronounced stream, with two i's for integration and intelligence. The company was founded in 2012 as WebAction, with a mission to help companies make data useful the instant it's born.",
                 "The Trade Desk is the fastest-growing adtech platform for a reason – our people. We’re here because we believe we're building something special, and we're looking for good people to pitch in.",
         };
         String studio[] = {
-                "B- (75/100)", "B+ (71/100)", "A+ (87/100)", "A+ (80/100)", "A+ (93/100)", "A- (80/100)"
+                "B+ (71/100)", "B- (75/100)", "A+ (87/100)", "A+ (80/100)", "A+ (93/100)", "A- (80/100)"
         };
         String videoUrl[] = {
-                "https://www.youtube.com/embed/15XDna94DF8",
                 "https://www.youtube.com/embed/nXjU9UEwV9w",
+                "https://www.youtube.com/embed/15XDna94DF8",
                 "https://www.youtube.com/embed/rk8nPWmXsRo",
                 "https://www.youtube.com/embed/32C2cTkwGuM",
                 "https://www.youtube.com/embed/UAB9wyKZGf8",
                 "https://www.youtube.com/embed/gqNIIJfZA3E"
         };
         String bgImageUrl[] = {
-                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/33002/33002_profile_pepsico.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/61336/61336_profile_asana.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/16050/16050_profile_salesforce.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/48446/48446_profile_striim.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_profile_the-trade-desk--inc-.png"
         };
         String cardImageUrl[] = {
-                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_logo_comparably.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/33002/33002_logo_pepsico.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_logo_comparably.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/61336/logo.jpg",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/salesforce-logo.png",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/48446/logo.jpg",
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_logo_the-trade-desk--inc-.png"
         };
         String match[] = {
-                "98%",
                 "85%",
+                "98%",
                 "74%",
                 "85%",
                 "78%",
                 "81%"
         };
         String comparably[] = {
-                "https://www.youtube.com/embed/fUUM4lKHmlA",
                 "https://www.youtube.com/embed/59Eeo4-7m30",
+                "https://www.youtube.com/embed/fUUM4lKHmlA",
                 "https://www.youtube.com/embed/hLd32Fb2uy8",
                 "https://www.youtube.com/embed/VQ2sFiBFnxw",
                 "https://www.youtube.com/embed/tXyT94Yw_Qs",
                 "https://www.youtube.com/embed/tXyT94Yw_Qs"
         };
         int chart[] = {
-                R.mipmap.r1c1,
                 R.mipmap.r2c2,
+                R.mipmap.r1c1,
                 R.mipmap.r2c3,
                 R.mipmap.r2c4,
                 R.mipmap.r2c5,
