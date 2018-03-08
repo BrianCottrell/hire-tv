@@ -62,12 +62,12 @@ public final class MovieList {
                 "B- (75/100)", "A+ (79/100)", "A+ (78/100)", "B+ (71/100)", "B+ (71/100)", "A (77/100)"
         };
         String videoUrl[] = {
-                "https://www.youtube.com/watch?v=15XDna94DF8",
-                "https://www.youtube.com/watch?v=59Eeo4-7m30",
-                "https://www.youtube.com/watch?v=hLd32Fb2uy8",
-                "https://www.youtube.com/watch?v=VQ2sFiBFnxw",
-                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4",
-                "https://www.youtube.com/watch?v=tXyT94Yw_Qs"
+                "15XDna94DF8",
+                "59Eeo4-7m30",
+                "hLd32Fb2uy8",
+                "VQ2sFiBFnxw",
+                "tXyT94Yw_Qs",
+                "tXyT94Yw_Qs"
         };
         String bgImageUrl[] = {
                 "https://s3-us-west-1.amazonaws.com/companies.comparably.com/2916/2916_profile_comparably.png",

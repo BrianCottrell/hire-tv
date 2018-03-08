@@ -4,8 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HireTV.iml" filepath="$PROJECT_DIR$/HireTV.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hire-tv.iml" filepath="$PROJECT_DIR$/hire-tv.iml" />
+      <module fileurl="file://C:\Users\Brian\Documents\Projects\HireTV\hire-tv.iml" filepath="C:\Users\Brian\Documents\Projects\HireTV\hire-tv.iml" />
     </modules>
   </component>
 </project>

@@ -45,6 +45,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.google.android.youtube.player.YouTubeIntents;
 
 import java.util.Collections;
 import java.util.List;
@@ -176,8 +177,10 @@ public class VideoDetailsFragment extends DetailsFragment {
             @Override
             public void onActionClicked(Action action) {
                 if (action.getId() == ACTION_WATCH_TRAILER) {
-                    Intent intent = new Intent(getActivity(), PlaybackActivity.class);
-                    intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
+                    YouTubeIntents youTubeIntents;
+//                    Intent intent = new Intent(getActivity(), PlaybackActivity.class);
+//                    intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
+                    Intent intent = YouTubeIntents.createPlayVideoIntentWithOptions(getActivity(), mSelectedMovie.getVideoUrl(), true, true);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), action.toString(), Toast.LENGTH_SHORT).show();
