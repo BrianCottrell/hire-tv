@@ -221,6 +221,84 @@ public final class MovieList {
         }
         return list;
     }
+    public static List<Movie> setupMovies3() {
+        list = new ArrayList<>();
+        String title[] = {
+                "Leaf Group",
+                "Criteria Corp",
+                "The Walt Disney Company",
+                "PeerStreet",
+                "Forever 21",
+                "The Cheesecake Factory"
+        };
+        // add more here
+        String description[] = {
+                "Our mission is to build platforms across our media and marketplace properties to enable communities of creators to reach passionate audiences in large and growing lifestyle categories, while also helping advertisers find innovative ways to engage with their customers.",
+                "Criteria is a leading provider of web-based pre-employment testing services. Our mission is to make high-quality pre-employment testing solutions accessible to companies of all sizes.",
+                "The mission of The Walt Disney Company is to be one of the world’s leading producers and providers of entertainment and information.",
+                "We are a group of cross-industry experts who quit our day jobs to transform real estate finance in a way that creates a better deal for everyone.",
+                "FOREVER 21 is the 5th largest specialty retailer in the United States. FOREVER 21 has seen some remarkable accomplishments over the past 30 years.",
+                "We're known for our cheesecakes and fresh food, but it's our people that make us special. With over 250 menu items made fresh from scratch daily, our top-of-the-line chefs and superstar servers are the best at what they do because they're expected to deliver the best to our guests.",
+        };
+        String studio[] = {
+                "A (82/100)", "B (68/100)", "B (69/100)", "A+ (91/100)", "B (69/100)", "B+ (71/100)"
+        };
+        String videoUrl[] = {
+                "https://www.youtube.com/embed/6N1IfOhwvus",
+                "https://www.youtube.com/embed/MMfF2wUtSDU",
+                "https://www.youtube.com/embed/NxRrfgdW0FA",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
+                "https://www.youtube.com/embed/xO0_Mavr-kU",
+                "https://www.youtube.com/embed/Znv1Gpa5Zms"
+        };
+        String bgImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/529460/26488_profile_demand-media.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/40060/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/28423/28423_profile_the-walt-disney-company.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/74142/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/121258/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/309664/309664_profile_the-cheesecake-factory.png"
+        };
+        String cardImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/529460/26488_logo_demand-media.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/40060/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/28423/28423_logo_the-walt-disney-company.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/74142/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/121258/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/309664/logo.jpg"
+        };
+        String match[] = {
+                "87%",
+                "98%",
+                "88%",
+                "76%",
+                "90%",
+                "75%"
+        };
+        int chart[] = {
+                R.mipmap.r3c1,
+                R.mipmap.r3c2,
+                R.mipmap.r3c3,
+                R.mipmap.r3c4,
+                R.mipmap.r3c5,
+                R.mipmap.r3c6,
+        };
+        for (int index = 0; index < title.length; ++index) {
+            list.add(
+                    buildMovieInfo(
+                            "category",
+                            title[index],
+                            description[index],
+                            studio[index],
+                            videoUrl[index],
+                            cardImageUrl[index],
+                            bgImageUrl[index],
+                            match[index],
+                            chart[index]
+                    ));
+        }
+        return list;
+    }
 
     private static Movie buildMovieInfo(String category, String title,
                                         String description, String studio, String videoUrl, String cardImageUrl,
