@@ -398,6 +398,94 @@ public final class MovieList {
         return list;
     }
 
+    public static List<Movie> setupMovies6() {
+        list = new ArrayList<>();
+        String title[] = {
+                "GlobeChat",
+                "The Trade Desk, Inc.",
+                "Y media",
+                "ReachLocal",
+                "Revolution Prep",
+                "Enervee"
+        };
+        // add more here
+        String description[] = {
+                "Our mission is to build platforms across our media and marketplace properties to enable communities of creators to reach passionate audiences in large and growing lifestyle categories, while also helping advertisers find innovative ways to engage with their customers.",
+                "Criteria is a leading provider of web-based pre-employment testing services. Our mission is to make high-quality pre-employment testing solutions accessible to companies of all sizes.",
+                "The mission of The Walt Disney Company is to be one of the world’s leading producers and providers of entertainment and information.",
+                "We are a group of cross-industry experts who quit our day jobs to transform real estate finance in a way that creates a better deal for everyone.",
+                "FOREVER 21 is the 5th largest specialty retailer in the United States. FOREVER 21 has seen some remarkable accomplishments over the past 30 years.",
+                "We're known for our cheesecakes and fresh food, but it's our people that make us special. With over 250 menu items made fresh from scratch daily, our top-of-the-line chefs and superstar servers are the best at what they do because they're expected to deliver the best to our guests.",
+        };
+        String studio[] = {
+                "A+ (96/100)", "B (72/100)", "B (69/100)", "A+ (82/100)", "A+ (86/100)", "A (89/100)"
+        };
+        String videoUrl[] = {
+                "https://www.youtube.com/embed/6N1IfOhwvus",
+                "https://www.youtube.com/embed/q3SkMWaeKjQ",
+                "https://www.youtube.com/embed/f_PwPK_zKKU",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
+                "https://www.youtube.com/embed/Znv1Gpa5Zms"
+        };
+        String bgImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/124905/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_profile_the-trade-desk--inc-.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/74142/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27342/27342_profile_reachlocal.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/121258/bg.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/17602/17602_profile_enervee.png"
+        };
+        String cardImageUrl[] = {
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/124905/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27794/27794_logo_the-trade-desk--inc-.png",
+                "https://a1-static.comparably.com/static/skins/comparably_light/global/img/logo-company.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/27342/27342_logo_reachlocal.png",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/293916/logo.jpg",
+                "https://s3-us-west-1.amazonaws.com/companies.comparably.com/17602/logo.jpg"
+        };
+        String match[] = {
+                "83%",
+                "59%",
+                "84%",
+                "96%",
+                "43%",
+                "56%"
+        };
+        String comparably[] = {
+                "https://www.youtube.com/embed/6N1IfOhwvus",
+                "https://www.youtube.com/embed/MMfF2wUtSDU",
+                "https://www.youtube.com/embed/NxRrfgdW0FA",
+                "https://www.youtube.com/embed/LfufsQSEVyg",
+                "https://www.youtube.com/embed/xO0_Mavr-kU",
+                "https://www.youtube.com/embed/Znv1Gpa5Zms"
+        };
+        int chart[] = {
+                R.mipmap.r3c1,
+                R.mipmap.r3c2,
+                R.mipmap.r3c3,
+                R.mipmap.r3c4,
+                R.mipmap.r3c5,
+                R.mipmap.r3c6,
+        };
+        for (int index = 0; index < title.length; ++index) {
+            list.add(
+                    buildMovieInfo(
+                            "category",
+                            title[index],
+                            description[index],
+                            studio[index],
+                            videoUrl[index],
+                            cardImageUrl[index],
+                            bgImageUrl[index],
+                            match[index],
+                            comparably[index],
+                            chart[index]
+                    ));
+        }
+        return list;
+    }
+
     private static Movie buildMovieInfo(String category, String title,
                                         String description, String studio, String videoUrl, String cardImageUrl,
                                         String backgroundImageUrl, String match, String comparably, int chart) {

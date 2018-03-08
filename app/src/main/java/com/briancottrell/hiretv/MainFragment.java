@@ -175,6 +175,9 @@ public class MainFragment extends BrowseFragment {
         List<Movie> list1 = MovieList.setupMovies();
         List<Movie> list2 = MovieList.setupMovies2();
         List<Movie> list3 = MovieList.setupMovies3();
+        List<Movie> list4 = MovieList.setupMovies4();
+        List<Movie> list5 = MovieList.setupMovies5();
+        List<Movie> list6 = MovieList.setupMovies6();
 
         defaultmovie = list1.get(0);
 
@@ -202,10 +205,34 @@ public class MainFragment extends BrowseFragment {
                     listRowAdapter.add(list2.get(j % 5));
                 }
             }
-            else
+            else if(i == 2)
             {
                 for (int j = 0; j < NUM_COLS; j++) {
                     listRowAdapter.add(list3.get(j % 5));
+                }
+            }
+            else if(i == 3)
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list4.get(j % 5));
+                }
+            }
+            else if(i == 4)
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list5.get(j % 5));
+                }
+            }
+            else if(i == 5)
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list6.get(j % 5));
+                }
+            }
+            else
+            {
+                for (int j = 0; j < NUM_COLS; j++) {
+                    listRowAdapter.add(list1.get(j % 5));
                 }
             }
 
