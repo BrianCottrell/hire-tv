@@ -19,7 +19,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v17.leanback.app.DetailsFragment;
 import android.support.v17.leanback.app.DetailsFragmentBackgroundController;
 import android.support.v17.leanback.widget.Action;
@@ -46,7 +45,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.google.android.youtube.player.YouTubeIntents;
 
 import java.util.Collections;
 import java.util.List;
@@ -178,15 +176,14 @@ public class VideoDetailsFragment extends DetailsFragment {
             @Override
             public void onActionClicked(Action action) {
                 if (action.getId() == ACTION_WATCH_TRAILER) {
-                    YouTubeIntents youTubeIntents;
-//                    Intent intent = new Intent(getActivity(), PlaybackActivity.class);
-//                    intent.putExtra(DetailsActivity.MOVIE, mSelectedMovie);
-
-//                    Intent intent = YouTubeIntents.createPlayVideoIntentWithOptions(getActivity(), mSelectedMovie.getVideoUrl(), true, true);
-
                     Intent intent = new Intent();
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(mSelectedMovie.getVideoUrl()));
+                    startActivity(intent);
+                } else if (action.getId() == ACTION_RENT) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(mSelectedMovie.getComparably()));
                     startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), action.toString(), Toast.LENGTH_SHORT).show();

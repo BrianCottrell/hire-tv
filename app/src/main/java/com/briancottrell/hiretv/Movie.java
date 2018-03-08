@@ -34,6 +34,7 @@ public class Movie implements Serializable {
     private String studio;
     private String category;
     private String match;
+    private String comparably;
     private int chart;
 
     public Movie() {
@@ -113,6 +114,14 @@ public class Movie implements Serializable {
 
     public void setChart(int chart) {
         this.chart = chart;
+    }
+
+    public String getComparably() {
+        return comparably;
+    }
+
+    public void setComparably(String comparably) {
+        this.comparably = comparably;
     }
 
     public int getChart() {

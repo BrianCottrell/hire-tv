@@ -96,13 +96,13 @@ public final class MovieList {
         };
 
 
-        String percentage[] = {
-                "CEORating A\nExecutiveTeam A-\nProfessionalDevelopment B+",
-                "55%",
-                "89%",
-                "74%",
-                "82%",
-                "52%"
+        String comparably[] = {
+                "https://www.youtube.com/embed/fUUM4lKHmlA",
+                "https://www.youtube.com/embed/59Eeo4-7m30",
+                "https://www.youtube.com/embed/hLd32Fb2uy8",
+                "https://www.youtube.com/embed/VQ2sFiBFnxw",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs"
         };
 
         int chart[] = {
@@ -126,6 +126,7 @@ public final class MovieList {
                             cardImageUrl[index],
                             bgImageUrl[index],
                             match[index],
+                            comparably[index],
                             chart[index]
                     ));
         }
@@ -186,7 +187,14 @@ public final class MovieList {
                 "78%",
                 "81%"
         };
-
+        String comparably[] = {
+                "https://www.youtube.com/embed/fUUM4lKHmlA",
+                "https://www.youtube.com/embed/59Eeo4-7m30",
+                "https://www.youtube.com/embed/hLd32Fb2uy8",
+                "https://www.youtube.com/embed/VQ2sFiBFnxw",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs",
+                "https://www.youtube.com/embed/tXyT94Yw_Qs"
+        };
         int chart[] = {
                 R.mipmap.r1c1,
                 R.mipmap.r2c2,
@@ -207,6 +215,7 @@ public final class MovieList {
                             cardImageUrl[index],
                             bgImageUrl[index],
                             match[index],
+                            comparably[index],
                             chart[index]
                     ));
         }
@@ -215,7 +224,7 @@ public final class MovieList {
 
     private static Movie buildMovieInfo(String category, String title,
                                         String description, String studio, String videoUrl, String cardImageUrl,
-                                        String backgroundImageUrl, String match, int chart) {
+                                        String backgroundImageUrl, String match, String comparably, int chart) {
         Movie movie = new Movie();
         movie.setId(count++);
         movie.setTitle(title);
@@ -226,6 +235,7 @@ public final class MovieList {
         movie.setBackgroundImageUrl(backgroundImageUrl);
         movie.setVideoUrl(videoUrl);
         movie.setMatch(match);
+        movie.setComparably(comparably);
         movie.setChart(chart);
         return movie;
     }
